@@ -82,6 +82,6 @@ sudo apt-get install python3
 ```
 ## Wiring
 
-![Wiring Diagram with NPN Transistor ](github.com/devreyakan/Simple_SBC_Fan_Control/blob/main/IMG/IMG_5906.png)
+![Wiring Diagram with NPN Transistor ](/IMG/IMG_5906.png)
 
   
