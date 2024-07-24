@@ -84,4 +84,30 @@ sudo apt-get install python3
 
 ![Wiring Diagram with NPN Transistor ](/IMG/IMG_5906.png)
 
-  
+## Creating systemd Services
+Create a systemd service file. Save this in /etc/systemd/system/fan_kontrol.service:
+ ```bash 
+  sudo nano /etc/systemd/system/fan_kontrol.service
+  ```
+ ```bash 
+[Unit]
+Description=Fan Control Service
+After=network.target
+
+[Service]
+ExecStart=/usr/local/bin/fan_kontrol.sh
+Restart=always
+User=root
+
+[Install]
+WantedBy=multi-user.target
+
+
+```
+### Start systemd Service
+
+ ```bash 
+sudo systemctl daemon-reload
+sudo systemctl enable fan_kontrol.service
+sudo systemctl start fan_kontrol.service
+```
